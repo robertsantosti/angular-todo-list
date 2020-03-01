@@ -15,4 +15,15 @@ export class AppComponent {
     this.todos.push(new Todo(2, "Ir ao supermercado", false));
     this.todos.push(new Todo(3, "Cortar o cabelo", false));
   }
+
+  public remove(todo: Todo) {
+    const index = this.todos.indexOf(todo);
+    if (index !== -1) {
+      this.todos.splice(index, 1);
+    }
+  }
+
+  public markAsDone() {}
+
+  public markAsUndone() {}
 }
