@@ -8,4 +8,75 @@ body {
   font-weight: 300;
   background-color: #3023ae;
   background: linear-gradient(60deg, #3023ae 0%, #c86dd7 100%);
+  color: #fff;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  margin: 10px;
+  padding: 20px;
+  background-color: #fff;
+  color: rgba(48, 35, 174, 0.5);
+  border-radius: 10px;
+  box-shadow: 3px 4px 14px 0 rgba(0, 0, 0, 0.4);
+  list-style: none;
+  width: 60vw;
+}
+
+ul li {
+  padding: 10px 0;
+  font-size: 1.25em;
+  border-bottom: 1px solid rgba(48, 35, 174, 0.5);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+}
+
+ul li:last-child {
+  border: 0;
+}
+
+ul li .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul li button {
+  font-size: 1.25em;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  border-radius: 50%;
+  border: 1px solid rgba(48, 35, 174, 0.5);
+  transition: 0.5s;
+}
+
+.fa-check {
+  color: rgba(48, 35, 174, 0.5);
+}
+
+.fa-times {
+  color: rgba(255, 0, 0, 0.5);
+}
+
+.fa-redo {
+  color: rgba(200, 109, 215, 0.5);
+}
+
+.fa-check:hover {
+  color: rgba(48, 35, 174, 1);
+}
+
+.fa-times:hover {
+  color: rgba(255, 0, 0, 1);
+}
+
+.fa-redo:hover {
+  color: rgba(200, 109, 215, 1);
 }

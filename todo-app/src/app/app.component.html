@@ -4,10 +4,16 @@
     <small>Não possui nenhuma tarefa para hoje</small>
   </p>
   <li *ngFor="let todo of todos">
-    {{ todo.id + ". " + todo.title }}
-    <button (click)="markAsDone(todo)" *ngIf="!todo.done">Concluir</button>
-    <button (click)="markAsUndone(todo)" *ngIf="todo.done">Refazer</button>
-    <button (click)="remove(todo)">Remover</button>
+    <span>{{ todo.title }}</span>
+    <div class="buttons">
+      <button (click)="markAsDone(todo)" *ngIf="!todo.done">
+        <span class="fas fa-check"></span>
+      </button>
+      <button (click)="markAsUndone(todo)" *ngIf="todo.done">
+        <span class="fas fa-redo"></span>
+      </button>
+      <button (click)="remove(todo)"><span class="fas fa-times"></span></button>
+    </div>
   </li>
 </ul>
 
