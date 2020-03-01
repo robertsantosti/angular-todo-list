@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  title = 'todo-app';
+  public todos: any[] = [];
+
+  constructor() {
+    this.todos.push("Passear com o cachorro");
+    this.todos.push("Ir ao supermercado");
+    this.todos.push("Cortar o cabelo");
+  }
 }
