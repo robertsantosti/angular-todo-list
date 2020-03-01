@@ -53,8 +53,12 @@ ul li button {
   height: 50px;
   margin: 0 10px;
   border-radius: 50%;
-  border: 1px solid rgba(48, 35, 174, 0.5);
+  border: 1px solid rgba(48, 35, 174, 0.3);
   transition: 0.5s;
+}
+
+ul li button:hover {
+  border: 1px solid rgba(48, 35, 174, 1);
 }
 
 .fa-check {
@@ -79,4 +83,57 @@ ul li button {
 
 .fa-redo:hover {
   color: rgba(200, 109, 215, 1);
+}
+
+.title {
+  font-weight: 400;
+  text-align: center;
+  font-size: 2em;
+}
+
+form fieldset {
+  border: 0;
+  padding: 20px;
+}
+
+form fieldset input {
+  height: 50px;
+  width: 65%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  margin: 0 10px;
+  padding-left: 10px;
+  font-size: 1em;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0);
+  outline: 0;
+}
+
+form fieldset input::placeholder {
+  color: #fff;
+}
+
+.error {
+  color: rgba(255, 0, 0, 0.75);
+}
+
+form fieldset button {
+  height: 50px;
+  width: 50px;
+  border: none;
+  background-color: rgba(48, 35, 174, 0.5);
+  border-radius: 50%;
+}
+
+form fieldset button .fa-check {
+  color: #fff;
+}
+
+form fieldset button:disabled .fa-check {
+  color: #333;
+}
+
+form fieldset button:disabled {
+  border: 1px solid #333;
+  background-color: rgba(0, 0, 0, 0);
 }

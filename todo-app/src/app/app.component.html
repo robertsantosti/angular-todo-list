@@ -1,4 +1,4 @@
-<h1>{{ title }}</h1>
+<h1 class="title"><span class="fas fa-list"></span> {{ title }}</h1>
 <ul>
   <p *ngIf="todos.length === 0">
     <small>Não possui nenhuma tarefa para hoje</small>
@@ -19,16 +19,25 @@
 
 <form [formGroup]="form">
   <fieldset>
-    <label>Tarefa: </label>
+    <label><span class="fas fa-plus"></span> Tarefa</label>
     <input
       type="text"
       placeholder="Título da tarefa"
       maxlength="60"
       formControlName="title"
     />
-    <small *ngIf="form.controls.title.invalid && !form.controls.title.pristine"
-      >Esse campo deve conter entre 3 e 60 caracteres</small
+    <button [disabled]="form.invalid" (click)="add()">
+      <span class="fas fa-check"></span>
+    </button>
+
+    <div
+      class="error"
+      *ngIf="form.controls.title.invalid && !form.controls.title.pristine"
     >
-    <button [disabled]="form.invalid" (click)="add()">Salvar</button>
+      <small>
+        <span class="fas fa-times-circle"></span> Esse campo deve conter entre 3
+        e 60 caracteres
+      </small>
+    </div>
   </fieldset>
 </form>
